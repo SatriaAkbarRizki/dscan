@@ -1,4 +1,4 @@
-import 'package:dscan/widget/general/card_item_scan.dart';
+import 'package:dscan/widget/general/item_scan.dart';
 import 'package:dscan/widget/home/card_action_scan.dart';
 import 'package:flutter/material.dart';
 
@@ -7,6 +7,11 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        forceMaterialTransparency: true,
+        title: Text('Dscan', style: Theme.of(context).textTheme.titleLarge),
+        titleSpacing: 0,
+      ),
       body: SingleChildScrollView(
         child: Column(
           crossAxisAlignment: CrossAxisAlignment.start,
@@ -45,7 +50,7 @@ class HomeScreen extends StatelessWidget {
                 itemCount: 2,
                 scrollDirection: Axis.horizontal,
                 // shrinkWrap: true,
-                itemBuilder: (context, index) => CardItemScanGeneral(),
+                itemBuilder: (context, index) => ItemScanGeneral(),
               ),
             ),
           ],

@@ -1,8 +1,11 @@
+import 'package:dscan/nav/navbar.dart';
 import 'package:dscan/page/home.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter_riverpod/flutter_riverpod.dart';
 
 void main() {
-  runApp(const MainApp());
+  WidgetsFlutterBinding.ensureInitialized();
+  runApp(ProviderScope(child: const MainApp()));
 }
 
 class MainApp extends StatelessWidget {
@@ -21,7 +24,7 @@ class MainApp extends StatelessWidget {
           ),
         );
       },
-      home: HomeScreen(),
+      home: Navbar(),
     );
   }
 }
