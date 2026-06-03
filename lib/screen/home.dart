@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
           children: [
             Text(
               "Ready to scan?",
-              style: Theme.of(context).textTheme.titleMedium,
+              style: Theme.of(context).textTheme.titleSmall,
             ),
             Text(
               "Digitize your physical documents instantly with high precision.",

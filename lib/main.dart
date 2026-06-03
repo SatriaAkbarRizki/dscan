@@ -1,5 +1,5 @@
 import 'package:dscan/nav/navbar.dart';
-import 'package:dscan/page/home.dart';
+import 'package:dscan/screen/home.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 

@@ -15,8 +15,12 @@ class Navbar extends ConsumerWidget {
         currentIndex: currentIndex,
         onTap: (value) => stateNav.changeScreen(value),
         items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Scan", ),
+          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Scan"),
           BottomNavigationBarItem(icon: Icon(Icons.history), label: "Recent"),
+          BottomNavigationBarItem(
+            icon: Icon(Icons.settings),
+            label: "Settings",
+          ),
         ],
       ),
     );
