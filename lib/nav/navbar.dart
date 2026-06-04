@@ -11,14 +11,24 @@ class Navbar extends ConsumerWidget {
     final currentIndex = ref.watch(indexNavRiverpod);
     return Scaffold(
       body: stateNav.showScreen(),
-      bottomNavigationBar: BottomNavigationBar(
-        currentIndex: currentIndex,
-        onTap: (value) => stateNav.changeScreen(value),
-        items: [
-          BottomNavigationBarItem(icon: Icon(Icons.home), label: "Scan"),
-          BottomNavigationBarItem(icon: Icon(Icons.history), label: "Recent"),
-          BottomNavigationBarItem(
-            icon: Icon(Icons.settings),
+      bottomNavigationBar: NavigationBar(
+        
+        selectedIndex: currentIndex,
+        onDestinationSelected: (value) => stateNav.changeScreen(value),
+        destinations: const [
+          NavigationDestination(
+            icon: Icon(Icons.home_outlined),
+            selectedIcon: Icon(Icons.home),
+            label: "Scan",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.history_outlined),
+            selectedIcon: Icon(Icons.history),
+            label: "Recent",
+          ),
+          NavigationDestination(
+            icon: Icon(Icons.settings_outlined),
+            selectedIcon: Icon(Icons.settings),
             label: "Settings",
           ),
         ],

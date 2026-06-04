@@ -10,7 +10,7 @@ class RecentScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         forceMaterialTransparency: true,
-        title: Text('Dscan', style: Theme.of(context).textTheme.titleLarge),
+        title: Text('Dscan', style: Theme.of(context).textTheme.titleMedium),
         titleSpacing: 0,
       ),
       body: Column(

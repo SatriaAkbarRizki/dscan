@@ -9,7 +9,7 @@ class HomeScreen extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         forceMaterialTransparency: true,
-        title: Text('Dscan', style: Theme.of(context).textTheme.titleLarge),
+        title: Text('Dscan', style: Theme.of(context).textTheme.titleMedium),
         titleSpacing: 0,
       ),
       body: SingleChildScrollView(
@@ -32,7 +32,7 @@ class HomeScreen extends StatelessWidget {
               children: [
                 Text(
                   'Recent Scans',
-                  style: Theme.of(context).textTheme.titleMedium,
+                  style: Theme.of(context).textTheme.titleSmall,
                 ),
                 TextButton(
                   onPressed: () {},

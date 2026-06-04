@@ -25,7 +25,7 @@ class ItemAppScreen extends StatelessWidget {
             trailing: Switch(
               value: true,
               padding: EdgeInsets.all(0),
-              activeTrackColor: Color(0xFF003E6B),
+              activeTrackColor: Theme.of(context).primaryColor,
               onChanged: (value) {},
             ),
           ),
