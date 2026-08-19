@@ -1,3 +1,4 @@
+import 'package:dscan/route/route.dart';
 import 'package:dscan/widget/general/item_scan.dart';
 import 'package:dscan/widget/recent/search_box.dart';
 import 'package:flutter/material.dart';
@@ -27,7 +28,10 @@ class RecentScreen extends StatelessWidget {
                 mainAxisSpacing: 10,
                 childAspectRatio: 0.75,
               ),
-              itemBuilder: (context, index) => ItemScanGeneral(),
+              itemBuilder: (context, index) => GestureDetector(
+                onTap: () => Navigator.pushNamed(context, RouteNav.routeDetail),
+                child: ItemScanGeneral(),
+              ),
             ),
           ),
         ],
