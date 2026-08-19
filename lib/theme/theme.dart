@@ -56,5 +56,11 @@ class MyTheme {
         return const IconThemeData(color: Color(0xFF64748B), size: 22);
       }),
     ),
+
+    textButtonTheme: TextButtonThemeData(
+      style: ButtonStyle(
+        overlayColor: WidgetStatePropertyAll(const Color(0xffedf6f9)),
+      ),
+    ),
   );
 }
