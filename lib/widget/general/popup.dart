@@ -45,12 +45,15 @@ void showItemActions(BuildContext context) {
           },
         ),
         ListTile(
-          leading: SvgPicture.asset('assets/icons/icon-remove.svg'),
+          leading: SvgPicture.asset(
+            'assets/icons/icon-remove.svg',
+            colorFilter: ColorFilter.mode(Colors.red, BlendMode.srcIn),
+          ),
           title: Text(
             'Delete',
             style: Theme.of(
               context,
-            ).textTheme.labelSmall?.copyWith(fontSize: 12),
+            ).textTheme.labelSmall?.copyWith(fontSize: 12, color: Colors.red),
           ),
           onTap: () {
             Navigator.pop(context);

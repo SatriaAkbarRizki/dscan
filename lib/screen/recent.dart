@@ -9,34 +9,38 @@ class RecentScreen extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        forceMaterialTransparency: true,
-        title: Text('Dscan', style: Theme.of(context).textTheme.titleMedium),
-        titleSpacing: 0,
-      ),
-      body: Column(
-        spacing: 10,
-        crossAxisAlignment: CrossAxisAlignment.start,
-        children: [
-          SearchBoxRecent(),
-          Flexible(
-            child: GridView.builder(
-              itemCount: 6,
-              gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisCount: 2,
-                crossAxisSpacing: 10,
-                mainAxisSpacing: 10,
-                childAspectRatio: 0.75,
-              ),
-              itemBuilder: (context, index) => GestureDetector(
-                onTap: () => Navigator.pushNamed(context, RouteNav.routeDetail),
-                onLongPress: () => showItemActions(context),
-                child: ItemScanGeneral(),
+    return Padding(
+      padding: EdgeInsets.all(12),
+      child: Scaffold(
+        appBar: AppBar(
+          forceMaterialTransparency: true,
+          title: Text('Dscan', style: Theme.of(context).textTheme.titleMedium),
+          titleSpacing: 0,
+        ),
+        body: Column(
+          spacing: 10,
+          crossAxisAlignment: CrossAxisAlignment.start,
+          children: [
+            SearchBoxRecent(),
+            Flexible(
+              child: GridView.builder(
+                itemCount: 6,
+                gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
+                  crossAxisCount: 2,
+                  crossAxisSpacing: 10,
+                  mainAxisSpacing: 10,
+                  childAspectRatio: 0.75,
+                ),
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () =>
+                      Navigator.pushNamed(context, RouteNav.routeDetail),
+                  onLongPress: () => showItemActions(context),
+                  child: ItemScanGeneral(),
+                ),
               ),
             ),
-          ),
-        ],
+          ],
+        ),
       ),
     );
   }

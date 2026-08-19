@@ -20,14 +20,6 @@ class MainApp extends StatelessWidget {
       routes: RouteNav.routeNav,
       debugShowCheckedModeBanner: false,
       theme: MyTheme().lightTheme,
-      builder: (context, child) {
-        return Material(
-          child: Padding(
-            padding: const EdgeInsets.all(12),
-            child: SafeArea(child: child!),
-          ),
-        );
-      },
     );
   }
 }

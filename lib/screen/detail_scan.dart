@@ -19,12 +19,15 @@ class DetailScan extends StatelessWidget {
 
         titleSpacing: 0,
       ),
-      body: ListView.builder(
-        itemCount: 2,
-        shrinkWrap: true,
-        itemBuilder: (context, index) => GestureDetector(
-          onLongPress: () => showItemActions(context),
-          child: ItemScanGeneralHorizontal(),
+      body: Padding(
+        padding: const EdgeInsets.all(5),
+        child: ListView.builder(
+          itemCount: 2,
+          shrinkWrap: true,
+          itemBuilder: (context, index) => GestureDetector(
+            onLongPress: () => showItemActions(context),
+            child: ItemScanGeneralHorizontal(),
+          ),
         ),
       ),
     );

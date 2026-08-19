@@ -8,60 +8,63 @@ class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        forceMaterialTransparency: true,
-        title: Text('Dscan', style: Theme.of(context).textTheme.titleMedium),
-        titleSpacing: 0,
-      ),
-      body: SingleChildScrollView(
-        child: Column(
-          crossAxisAlignment: CrossAxisAlignment.start,
-          mainAxisAlignment: MainAxisAlignment.start,
-          spacing: 10,
-          children: [
-            Text(
-              "Ready to scan?",
-              style: Theme.of(context).textTheme.titleSmall,
-            ),
-            Text(
-              "Digitize your physical documents instantly with high precision.",
-              style: Theme.of(context).textTheme.bodySmall,
-            ),
-            CardActionScanHome(),
-            Row(
-              mainAxisAlignment: MainAxisAlignment.spaceBetween,
-              children: [
-                Text(
-                  'Recent Scans',
-                  style: Theme.of(context).textTheme.titleSmall,
-                ),
-                TextButton(
-                  onPressed: () {},
-                  child: Text(
-                    'View All',
+    return Padding(
+      padding: EdgeInsets.all(12),
+      child: Scaffold(
+        appBar: AppBar(
+          forceMaterialTransparency: true,
+          title: Text('Dscan', style: Theme.of(context).textTheme.titleMedium),
+          titleSpacing: 0,
+        ),
+        body: SingleChildScrollView(
+          child: Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            mainAxisAlignment: MainAxisAlignment.start,
+            spacing: 10,
+            children: [
+              Text(
+                "Ready to scan?",
+                style: Theme.of(context).textTheme.titleSmall,
+              ),
+              Text(
+                "Digitize your physical documents instantly with high precision.",
+                style: Theme.of(context).textTheme.bodySmall,
+              ),
+              CardActionScanHome(),
+              Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Text(
+                    'Recent Scans',
                     style: Theme.of(context).textTheme.titleSmall,
                   ),
-                ),
-              ],
-            ),
-            SizedBox(
-              height: 250,
+                  TextButton(
+                    onPressed: () {},
+                    child: Text(
+                      'View All',
+                      style: Theme.of(context).textTheme.titleSmall,
+                    ),
+                  ),
+                ],
+              ),
+              SizedBox(
+                height: 250,
 
-              child: ListView.builder(
-                physics: NeverScrollableScrollPhysics(),
-                itemCount: 2,
-                scrollDirection: Axis.horizontal,
+                child: ListView.builder(
+                  physics: NeverScrollableScrollPhysics(),
+                  itemCount: 2,
+                  scrollDirection: Axis.horizontal,
 
-                itemBuilder: (context, index) => GestureDetector(
-                  onTap: () =>
-                      Navigator.pushNamed(context, RouteNav.routeDetail),
-                  onLongPress: () => showItemActions(context),
-                  child: ItemScanGeneral(),
+                  itemBuilder: (context, index) => GestureDetector(
+                    onTap: () =>
+                        Navigator.pushNamed(context, RouteNav.routeDetail),
+                    onLongPress: () => showItemActions(context),
+                    child: ItemScanGeneral(),
+                  ),
                 ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
