@@ -22,14 +22,12 @@ class MainApp extends StatelessWidget {
       theme: MyTheme().lightTheme,
       builder: (context, child) {
         return Material(
-          color: Colors.white,
           child: Padding(
             padding: const EdgeInsets.all(12),
             child: SafeArea(child: child!),
           ),
         );
       },
-
     );
   }
 }
