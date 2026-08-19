@@ -1,3 +1,4 @@
+import 'package:dscan/route/route.dart';
 import 'package:dscan/widget/general/item_scan.dart';
 import 'package:dscan/widget/home/card_action_scan.dart';
 import 'package:flutter/material.dart';
@@ -51,7 +52,11 @@ class HomeScreen extends StatelessWidget {
                 itemCount: 2,
                 scrollDirection: Axis.horizontal,
 
-                itemBuilder: (context, index) => ItemScanGeneral(),
+                itemBuilder: (context, index) => GestureDetector(
+                  onTap: () =>
+                      Navigator.pushNamed(context, RouteNav.routeDetail),
+                  child: ItemScanGeneral(),
+                ),
               ),
             ),
           ],

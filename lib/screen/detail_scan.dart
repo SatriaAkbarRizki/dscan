@@ -1,4 +1,5 @@
 import 'package:dscan/widget/general/item_scan.dart';
+import 'package:dscan/widget/general/item_scan_horinzontal.dart';
 import 'package:flutter/material.dart';
 
 class DetailScan extends StatelessWidget {
@@ -9,17 +10,19 @@ class DetailScan extends StatelessWidget {
     return Scaffold(
       appBar: AppBar(
         forceMaterialTransparency: true,
-        title: Text('Dscan', style: Theme.of(context).textTheme.titleMedium),
+        leadingWidth: 40,
+        title: Text(
+          'Title First Documment Scan',
+          style: Theme.of(context).textTheme.titleMedium,
+        ),
+
         titleSpacing: 0,
       ),
-      body: SizedBox(
-        height: 250,
-
-        child: ListView.builder(
-          itemCount: 2,
-
-          itemBuilder: (context, index) => ItemScanGeneral(),
-        ),
+      body: ListView.builder(
+        itemCount: 2,
+        shrinkWrap: true,
+        itemBuilder: (context, index) =>
+            SizedBox(width: 180, child: ItemScanGeneralHorizontal()),
       ),
     );
   }
