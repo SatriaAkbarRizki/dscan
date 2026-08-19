@@ -45,11 +45,12 @@ class HomeScreen extends StatelessWidget {
             ),
             SizedBox(
               height: 250,
+
               child: ListView.builder(
                 physics: NeverScrollableScrollPhysics(),
                 itemCount: 2,
                 scrollDirection: Axis.horizontal,
-                // shrinkWrap: true,
+
                 itemBuilder: (context, index) => ItemScanGeneral(),
               ),
             ),

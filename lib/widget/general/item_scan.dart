@@ -15,7 +15,7 @@ class ItemScanGeneral extends StatelessWidget {
               children: [
                 Container(
                   height: 180,
-                  width: 150,
+                  width: 180,
                   decoration: const BoxDecoration(
                     image: DecorationImage(
                       image: AssetImage(
